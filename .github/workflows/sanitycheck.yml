@@ -11,23 +11,22 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        action_branch: ['dev']
     
     steps:
        - uses: actions/checkout@master
-       - uses: ada-actions/toolchain@${{ matrix.action_branch }}
+       - uses: ada-actions/toolchain@dev
          with:
            distrib: community
            target: native
        - run: gprbuild hello
  
-       - uses: ada-actions/toolchain@${{ matrix.action_branch }}
+       - uses: ada-actions/toolchain@dev
          with:
            distrib: community
            target: arm-elf
        - run: gprbuild --target=arm-eabi --RTS=zfp-microbit hello
          
-       - uses: ada-actions/toolchain@${{ matrix.action_branch }}
+       - uses: ada-actions/toolchain@dev
          with:
            distrib: community
            target: riscv32-elf
@@ -36,7 +35,7 @@ jobs:
        - run: gprbuild --target=riscv32-elf --RTS=zfp-hifive1 hello
          if: contains(matrix.os, 'ubuntu')
 
-       - uses: ada-actions/toolchain@${{ matrix.action_branch }}
+       - uses: ada-actions/toolchain@dev
          with:
            distrib: fsf
            target: native
