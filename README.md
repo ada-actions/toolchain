@@ -10,12 +10,12 @@ Basic:
 ```yaml
 steps:
 - uses: actions/checkout@master
-- uses: Fabien-Chouteau/setup-ada@dev
+- uses: ada-actions/toolchain@dev
   with:
     distrib: fsf
     target: native
 - run: gprbuild hello
-- uses: Fabien-Chouteau/setup-ada@dev
+- uses: ada-actions/toolchain@dev
   with:
     distrib: community
     target: arm-elf
