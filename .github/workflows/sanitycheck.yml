@@ -1,0 +1,43 @@
+name: Sanity check
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: CI on ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        branch: [dev, master]
+    
+    steps:
+       - uses: actions/checkout@master
+       - uses: ada-actions/toolchain@${{ matrix.branch }}
+         with:
+           distrib: community
+           target: native
+       - run: gprbuild hello
+ 
+       - uses: ada-actions/toolchain@${{ matrix.branch }}
+         with:
+           distrib: community
+           target: arm-elf
+       - run: gprbuild --target=arm-eabi --RTS=zfp-microbit hello
+         
+       - uses: ada-actions/toolchain@${{ matrix.branch }}
+         with:
+           distrib: community
+           target: riscv32-elf
+         if: contains(matrix.os, 'ubuntu')
+       
+       - run: gprbuild --target=riscv32-elf --RTS=zfp-hifive1 hello
+         if: contains(matrix.os, 'ubuntu')
+
+       - uses: ada-actions/toolchain@${{ matrix.branch }}
+         with:
+           distrib: fsf
+           target: native
+         if: contains(matrix.os, 'ubuntu')
