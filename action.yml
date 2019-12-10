@@ -1,4 +1,4 @@
-name: 'setup-ada'
+name: 'ada-actions/toolchain'
 description: 'Setup and Ada development environment'
 author: 'AdaCore'
 inputs:
