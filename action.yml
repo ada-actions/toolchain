@@ -1,6 +1,9 @@
 name: 'ada-actions/toolchain'
 description: 'Setup and Ada development environment'
 author: 'AdaCore'
+branding:
+  icon: 'box'
+  color: 'green'
 inputs:
   distrib:
     description: 'GNAT distribution (fsf or community)'
