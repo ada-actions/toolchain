@@ -1,5 +1,5 @@
 name: 'ada-actions/toolchain'
-description: 'Setup and Ada development environment'
+description: 'Setup an Ada development environment'
 author: 'AdaCore'
 branding:
   icon: 'box'
