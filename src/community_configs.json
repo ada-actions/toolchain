@@ -2,27 +2,27 @@
     "linux": {
         "2020": {
             "native": {
-                "url" : "https://community.download.adacore.com/v1/4d99b7b2f212c8efdab2ba8ede474bb9fa15888d?filename=gnat-2020-20200429-x86_64-linux-bin",
-                "pack": "gnat-2020-20200429-x86_64-linux-bin",
-                "sha1": "4d99b7b2f212c8efdab2ba8ede474bb9fa15888d"
+                "url" : "https://community.download.adacore.com/v1/a639696a9fd3bdf0be21376cc2dc3129323cbe42?filename=gnat-2020-20200818-x86_64-linux-bin",
+                "pack": "gnat-2020-20200818-x86_64-linux-bin",
+                "sha1": "a639696a9fd3bdf0be21376cc2dc3129323cbe42"
             },
 
             "arm-elf": {
-                "url" : "https://community.download.adacore.com/v1/2b8ddb644a06808e7d2c6b62edf16d31b02f514f?filename=gnat-2020-20200429-arm-elf-linux64-bin",
-                "pack": "gnat-2020-20200429-arm-elf-linux64-bin",
-                "sha1": "2b8ddb644a06808e7d2c6b62edf16d31b02f514f"
+                "url" : "https://community.download.adacore.com/v1/7caf13b986227c7a00c64e544e85eee08945b892?filename=gnat-2020-20200818-arm-elf-linux64-bin",
+                "pack": "gnat-2020-20200818-arm-elf-linux64-bin",
+                "sha1": "7caf13b986227c7a00c64e544e85eee08945b892"
             },
 
             "riscv32-elf": {
-                "url" : "https://community.download.adacore.com/v1/fe26719b2279dee730d3e5a239d95c9fe926c83d?filename=gnat-2020-20200429-riscv32-elf-linux64-bin",
-                "pack": "gnat-2020-20200429-riscv32-elf-linux64-bin",
-                "sha1": "fe26719b2279dee730d3e5a239d95c9fe926c83d"
+                "url" : "https://community.download.adacore.com/v1/d1dd914d2851f3770195325a6d1d55e962ea3a4b?filename=gnat-2020-20200818-riscv32-elf-linux64-bin",
+                "pack": "gnat-2020-20200818-riscv32-elf-linux64-bin",
+                "sha1": "d1dd914d2851f3770195325a6d1d55e962ea3a4b"
             },
 
             "riscv64-elf": {
-                "url" : "https://community.download.adacore.com/v1/7291cd0abd4ed5f641838b6ccfcdcadd3d040801?filename=gnat-2020-20200429-riscv64-elf-linux64-bin",
-                "pack": "gnat-2020-20200429-riscv64-elf-linux64-bin",
-                "sha1": "7291cd0abd4ed5f641838b6ccfcdcadd3d040801"
+                "url" : "https://community.download.adacore.com/v1/d8f51b8743088e001a9623fd04e9c231dece4281?filename=gnat-2020-20200818-riscv64-elf-linux64-bin",
+                "pack": "gnat-2020-20200818-riscv64-elf-linux64-bin",
+                "sha1": "d8f51b8743088e001a9623fd04e9c231dece4281"
             }
         },
         "2019": {
@@ -49,15 +49,15 @@
     "win32": {
         "2020": {
             "native": {
-                "url" : "https://community.download.adacore.com/v1/966801764ae160828c97d2c33000e9feb08d4cce?filename=gnat-2020-20200429-x86_64-windows-bin.exe",
-                "pack": "gnat-2020-20200429-x86_64-windows-bin",
-                "sha1": "966801764ae160828c97d2c33000e9feb08d4cce"
+                "url" : "https://community.download.adacore.com/v1/85091aafe5cb9463f1bfa20a53b6aa0931bf9fc2?filename=gnat-2020-20200818-x86_64-windows-bin.exe",
+                "pack": "gnat-2020-20200818-x86_64-windows-bin",
+                "sha1": "85091aafe5cb9463f1bfa20a53b6aa0931bf9fc2"
             },
 
             "arm-elf": {
-                "url" : "https://community.download.adacore.com/v1/955b7bccce241e9931124be4df11fa7bd5cb5aef?filename=gnat-2020-20200429-arm-elf-windows64-bin.exe",
-                "pack": "gnat-2020-20200429-arm-elf-windows64-bin",
-                "sha1": "955b7bccce241e9931124be4df11fa7bd5cb5aef"
+                "url" : "https://community.download.adacore.com/v1/2050f5473cbfed24684931fc6e8673f77bbe6512?filename=gnat-2020-20200818-arm-elf-windows64-bin.exe",
+                "pack": "gnat-2020-20200818-arm-elf-windows64-bin",
+                "sha1": "2050f5473cbfed24684931fc6e8673f77bbe6512"
             }
         },
         "2019": {
@@ -78,9 +78,9 @@
     "darwin": {
         "2020": {
             "native": {
-                "url" : "https://community.download.adacore.com/v1/4470dd195aec672d7c2f2a2bac3dcf6e59bbb26c?filename=gnat-2020-20200429-x86_64-darwin-bin.dmg",
-                "pack": "gnat-2020-20200429-x86_64-darwin-bin",
-                "sha1": "4470dd195aec672d7c2f2a2bac3dcf6e59bbb26c"
+                "url" : "https://community.download.adacore.com/v1/aefa0616b9476874823a7974d3dd969ac13dfe3a?filename=gnat-2020-20200818-x86_64-darwin-bin.dmg",
+                "pack": "gnat-2020-20200818-x86_64-darwin-bin",
+                "sha1": "aefa0616b9476874823a7974d3dd969ac13dfe3a"
             }
         },
         "2019": {
