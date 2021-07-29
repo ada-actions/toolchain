@@ -78,15 +78,24 @@ async function installGNATCommunity (year : string, target : string, install_dir
 
         await download(install_package_sh_url, script_sh);
 
-        if (IS_MACOS) {
+        if (!IS_MACOS) {
+            await exec.exec(`sh ${script_sh} ${dlFile} ${installDir}`);
+        } else if (url.endsWith(".pkg")) {
+            await io.mv(dlFile, pack + ".pkg");
+            await exec.exec(`installer -pkg ${pack}.pkg -target CurrentUserHomeDirectory`);
+            await exec.exec(`${process.env.HOME}/opt/gnat-ce-${year}/bin/gprbuild --version`);
+            await exec.exec(`rm -rf -v ${installDir}`);
+            await exec.exec(`mv -v ${process.env.HOME}/opt/gnat-ce-${year} ${installDir}`);
+            await exec.exec(`${installDir}/bin/gprbuild --version`);
+        } else {
             await io.mv(dlFile, pack + ".dmg");
             await exec.exec(`sh ${script_sh} ${pack}.dmg ${installDir}`);
-        } else {
-            await exec.exec(`sh ${script_sh} ${dlFile} ${installDir}`);
         }
     }
 
     core.addPath(path.join(installDir, 'bin'));
+    await exec.exec(`${installDir}/bin/gprbuild --version`);
+    await exec.exec(`gprbuild --version`);
 }
 
 async function installGNATFSF (target : string) {

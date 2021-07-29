@@ -114,6 +114,13 @@
     },
 
     "darwin": {
+        "2021": {
+            "native": {
+                "url" : "https://github.com/simonjwright/distributing-gcc/releases/download/gnat-ce-2021/gnat-ce-2021-x86_64-apple-darwin15.pkg",
+                "pack": "gnat-ce-2021-x86_64-apple-darwin15",
+                "sha1": "6ea48bc91658a02d46ffe8e74cb2480937916b5f"
+            }
+        },
         "2020": {
             "native": {
                 "url" : "https://community.download.adacore.com/v1/aefa0616b9476874823a7974d3dd969ac13dfe3a?filename=gnat-2020-20200818-x86_64-darwin-bin.dmg",
