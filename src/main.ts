@@ -57,9 +57,9 @@ async function installGNATCommunity (year : string, target : string, install_dir
         core.setFailed("Invalid checksum on downloaded package");
         return;
     }
-        
+
     const tmpDir = path.dirname(dlFile);
-    const installDir = (install_dir == '') ? path.join (tmpDir, pack) 
+    const installDir = (install_dir == '') ? path.join (tmpDir, pack)
                         : path.resolve(install_dir, pack);
     const script_qs = path.join (tmpDir, "install_script.qs");
     const script_sh = path.join (tmpDir, "install_package.sh");
@@ -100,6 +100,7 @@ async function installGNATFSF (target : string) {
         return;
     }
 
+    await exec.exec('sudo apt update'); // Ensure having latest indexes
     await exec.exec('sudo apt install gnat gprbuild');
 }
 
@@ -107,7 +108,7 @@ async function run() {
     try {
         const distrib = core.getInput('distrib');
         const target = core.getInput('target');
-        
+
         switch(distrib) {
         case "fsf":
             await installGNATFSF(target);
